@@ -1,3 +1,5 @@
+Clone this repo, run `npm install`, then `npm run dev` to run it.
+
 # Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
@@ -42,6 +44,6 @@ If you have state that's important to retain within a component, consider creati
 ```js
 // store.js
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```

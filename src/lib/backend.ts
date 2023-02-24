@@ -1,12 +1,8 @@
 import { ConvexSvelteClient } from "./convexSvelteClient";
-import convexConfig from "../../convex.json";
-import { OptimisticLocalStore } from "convex/browser";
+import type { OptimisticLocalStore } from "convex/browser";
 
-const clientConfig = {
-  address: "https://glad-hedgehog-888.convex.cloud",
-};
-
-const convex = new ConvexSvelteClient(clientConfig);
+const address = import.meta.env.VITE_CONVEX_URL;
+const convex = new ConvexSvelteClient(address);
 
 export const messages = convex.createQueryStore("getMessages", []);
 
